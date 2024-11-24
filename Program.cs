@@ -13,23 +13,23 @@ public class Solution
             if (nums[i] != val)
             {
                 elementsWihtoutVal += 1;
-                   nums[indexToWrite] = nums[i];
+                nums[indexToWrite] = nums[i];
                 indexToWrite += 1;
             }
         }
-
-
 
         for (int i = indexToWrite; i < nums.Length; i++)
         {
             nums[i] = -1;
         }
 
+        /*
         for (int i = 0; i < nums.Length; i++)
         {
             Console.Write(nums[i] + ", ");
         }
         Console.WriteLine();
+        */
 
         return elementsWihtoutVal;
     }
