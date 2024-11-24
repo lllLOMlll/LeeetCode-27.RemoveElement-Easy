@@ -12,21 +12,13 @@ public class Solution
         {
             if (nums[i] != val)
             {
-                // nums[indexToWrite] = nums[i];
                 elementsWihtoutVal += 1;
-                //nums[i] = -1;
-            }
-        }
-
-        for (int i = 0; i < nums.Length; i++)
-        {
-            if (nums[i] != val)
-            {
-                nums[indexToWrite] = nums[i];
+                   nums[indexToWrite] = nums[i];
                 indexToWrite += 1;
             }
-
         }
+
+
 
         for (int i = indexToWrite; i < nums.Length; i++)
         {
