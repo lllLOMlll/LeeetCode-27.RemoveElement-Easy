@@ -6,16 +6,31 @@ public class Solution
         if (nums.Length == 0) return 0;
 
         int indexToWrite = 0;
-        int elementsWihtouVal = 0;
+        int elementsWihtoutVal = 0;
 
         for (int i = 0; i < nums.Length; i++)
         {
-            if (nums[i] == val)
+            if (nums[i] != val)
             {
                 // nums[indexToWrite] = nums[i];
-                elementsWihtouVal += 1;
-                nums[i] = -1;
+                elementsWihtoutVal += 1;
+                //nums[i] = -1;
             }
+        }
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (nums[i] != val)
+            {
+                nums[indexToWrite] = nums[i];
+                indexToWrite += 1;
+            }
+
+        }
+
+        for (int i = indexToWrite; i < nums.Length; i++)
+        {
+            nums[i] = -1;
         }
 
         for (int i = 0; i < nums.Length; i++)
@@ -24,10 +39,8 @@ public class Solution
         }
         Console.WriteLine();
 
-        return elementsWihtouVal;
+        return elementsWihtoutVal;
     }
-
- 
 
     static void Main(string[] args)
     {
