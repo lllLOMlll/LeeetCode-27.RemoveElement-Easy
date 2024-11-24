@@ -10,15 +10,24 @@ public class Solution
 
         for (int i = 0; i < nums.Length; i++)
         {
-            if (nums[i] != val)
+            if (nums[i] == val)
             {
-                nums[indexToWrite] = nums[i];
+                // nums[indexToWrite] = nums[i];
                 elementsWihtouVal += 1;
+                nums[i] = -1;
             }
         }
 
+        for (int i = 0; i < nums.Length; i++)
+        {
+            Console.Write(nums[i] + ", ");
+        }
+        Console.WriteLine();
+
         return elementsWihtouVal;
     }
+
+ 
 
     static void Main(string[] args)
     {
